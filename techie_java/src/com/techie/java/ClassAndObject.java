@@ -1,37 +1,47 @@
 package com.techie.java;
 
-//creating a class
-class Test
-{
-	//this is normal non static method
-	public void totalSum() {
-		int a=10;
-		int b=20;
-		int sum=a+b;
-		System.out.println("the total sum is: " +sum );
-	}
-	// static method
-	public static void totalValue()
-	{
-		int a,b,value;
-		a=30;
-		b=70;
-		value=b-a;
-		System.out.println(" the total value is: " + value);
-	}
+/**
+ * Demonstrates the difference between
+ * non-static methods and static methods in Java.
+ */
+class Test {
+
+    /**
+     * Non-static (instance) method.
+     * Requires an object of the class to invoke it.
+     */
+    public void totalSum() {
+
+        int a = 10;
+        int b = 20;
+        int sum = a + b;
+
+        System.out.println("Total Sum: " + sum);
+    }
+
+    /**
+     * Static (class) method.
+     * Can be invoked using the class name without creating an object.
+     */
+    public static void totalValue() {
+
+        int a = 30;
+        int b = 70;
+        int value = b - a;
+
+        System.out.println("Total Value: " + value);
+    }
 }
 
 public class ClassAndObject {
 
-	public static void main(String[] args) {
-		//for non static methods we nee to call them using by creation of its object
-		Test t1=new Test();
-		t1.totalSum();
-		
-		// for static methods we no need to create a object,
-		//we can directly call the method by its class name
-		Test.totalValue();
-		
-	}
+    public static void main(String[] args) {
 
+        // Create an object to call the non-static method.
+        Test test = new Test();
+        test.totalSum();
+
+        // Call the static method using the class name.
+        Test.totalValue();
+    }
 }
