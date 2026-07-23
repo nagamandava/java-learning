@@ -1,4 +1,4 @@
-package com.techie.java;
+package com.techie.corejava;
 
 /**
  * Demonstrates the different types of variables in Java:
